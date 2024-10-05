@@ -1,0 +1,120 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 2px solid purple;
+  border-bottom: 3px solid cyan;
+}
+
+.logo img {
+  height: 50px;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid pink;
+}
+
+.auth-buttons {
+  display: flex; /* Always show on desktop */
+  gap: 10px;
+}
+
+/* Button styles */
+.login-btn,
+.register-btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.login-btn {
+  background-color: white;
+  color: blue;
+  border: 2px solid cyan;
+}
+
+.register-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.login-btn:hover,
+.register-btn:hover {
+  opacity: 0.9;
+}
+
+/* Hamburger icon styles */
+.hamburger {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.line {
+  height: 4px;
+  width: 25px;
+  background-color: black;
+  margin: 4px 0;
+}
+
+.close-icon {
+  font-size: 24px;
+  color: black;
+}
+
+/* Media query for tablets and smaller screens */
+@media (max-width: 768px) {
+  .header {
+      justify-content: space-between;
+      padding: 10px;
+  }
+
+  .nav-links {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+      display: none; /* Hidden by default */
+      width: 100%; /* Full width */
+  }
+
+  .nav-links.open {
+      display: flex; /* Show menu when open */
+  }
+
+  .hamburger {
+      display: flex; /* Show hamburger icon on small screens */
+  }
+
+  .auth-buttons {
+      display: none; /* Hide auth buttons by default on small screens */
+  }
+}
+
+/* Media query for very small screens (mobile) */
+@media (max-width: 480px) {
+  .nav-links a {
+      font-size: 0.9rem;
+      padding: 5px 0;
+  }
+
+  .logo img {
+      height: 40px;
+  }
+}
